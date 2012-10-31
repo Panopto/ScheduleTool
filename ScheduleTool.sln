@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScheduleTool", "ScheduleTool.csproj", "{210ACFB6-8777-4179-9EC1-E31D28BF6C68}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{210ACFB6-8777-4179-9EC1-E31D28BF6C68}.Debug|x86.ActiveCfg = Debug|x86
+		{210ACFB6-8777-4179-9EC1-E31D28BF6C68}.Debug|x86.Build.0 = Debug|x86
+		{210ACFB6-8777-4179-9EC1-E31D28BF6C68}.Release|x86.ActiveCfg = Release|x86
+		{210ACFB6-8777-4179-9EC1-E31D28BF6C68}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
