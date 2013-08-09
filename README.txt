@@ -7,6 +7,9 @@ Build steps:
 - Open VS2010 solution
 - In Solution Explorer, under Service References, select "Configure Service Reference" for both services
 - Update Address field to point to the correct server, click OK.
+- Edit app.config, ensure the following are set:
+  - Endpoint URLs should reference "PublicAPI", not "PublicAPISSL", eg:
+    - https://[servername]/Panopto/PublicAPI/4.2/Auth.svc
 - Build project
 
 Usage steps:
