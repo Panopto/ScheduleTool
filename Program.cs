@@ -165,16 +165,51 @@ namespace ScheduleTool
                                                                                     Password = password
                                                                                 };
 
+                int resultPerPage = 10;
+                int totalResult = 0;
+                int readResult = 0;
+                int pageNumber = 0;
+                Folder folder = null;
                 // Find folder 
-                ScheduleTool.SessionManagementService.Pagination pagination = new ScheduleTool.SessionManagementService.Pagination { MaxNumberResults = int.MaxValue, PageNumber = 0 };
-                ListFoldersResponse response = sessionMgr.GetFoldersList(sessionAuthInfo, new ListFoldersRequest { Pagination = pagination }, null);
-                Folder folder = response.Results.FirstOrDefault(a => a.Name == folderName);
+                do 
+                {
+                    ScheduleTool.SessionManagementService.Pagination pagination = new ScheduleTool.SessionManagementService.Pagination { MaxNumberResults = resultPerPage, PageNumber = pageNumber };
+                    ListFoldersResponse response = sessionMgr.GetFoldersList(sessionAuthInfo, new ListFoldersRequest { Pagination = pagination }, null);
+                    folder = response.Results.FirstOrDefault(a => a.Name == folderName);
+
+                    totalResult = response.TotalNumberResults;
+                    readResult += resultPerPage;
+                    pageNumber++;
+
+                    if (folder != null)
+                    {
+                        break;
+                    }
+                } while (readResult < totalResult);
+
                 Assert(folder != null, "Could not find specified folder - " + folderName);
 
                 // Find RR
-                ScheduleTool.RemoteRecorderManagementService.Pagination rrPagination = new ScheduleTool.RemoteRecorderManagementService.Pagination { MaxNumberResults = int.MaxValue, PageNumber = 0 };
-                ListRecordersResponse rrResponse = rrMgr.ListRecorders(rrAuthInfo, rrPagination, RecorderSortField.Name);
-                RemoteRecorder recorder = rrResponse.PagedResults.FirstOrDefault(a => a.Name == rrName);
+                totalResult = 0;
+                readResult = 0;
+                pageNumber = 0;
+                RemoteRecorder recorder = null;
+                do
+                {
+                    ScheduleTool.RemoteRecorderManagementService.Pagination rrPagination = new ScheduleTool.RemoteRecorderManagementService.Pagination { MaxNumberResults = resultPerPage, PageNumber = pageNumber };
+                    ListRecordersResponse rrResponse = rrMgr.ListRecorders(rrAuthInfo, rrPagination, RecorderSortField.Name);
+                    recorder = rrResponse.PagedResults.FirstOrDefault(a => a.Name == rrName);
+
+                    totalResult = rrResponse.TotalResultCount;
+                    readResult += resultPerPage;
+                    pageNumber++;
+
+                    if (recorder != null)
+                    {
+                        break;
+                    }
+                } while (readResult < totalResult);
+
                 Assert(recorder != null, "Could not find specified recorder - " + rrName);
                 List<ScheduleTool.RemoteRecorderManagementService.RecorderSettings> recorderSettings = new List<RecorderSettings>();
                 recorderSettings.Add(new RecorderSettings { RecorderId = recorder.Id });                

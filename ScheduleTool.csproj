@@ -166,10 +166,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\SessionManagementService\SessionManagement.disco" />
+    <None Include="Service References\RemoteRecorderManagementService\RemoteRecorderManagement.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\RemoteRecorderManagementService\RemoteRecorderManagement.disco" />
+    <None Include="Service References\SessionManagementService\SessionManagement.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
