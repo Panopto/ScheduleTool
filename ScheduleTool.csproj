@@ -71,23 +71,23 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Service References\RemoteRecorderManagementService\RemoteRecorderManagement.wsdl" />
-    <None Include="Service References\RemoteRecorderManagementService\RemoteRecorderManagement.xsd">
+    <None Include="Service References\RemoteRecorderManagementService\RemoteRecorderManagement1.wsdl" />
+    <None Include="Service References\RemoteRecorderManagementService\RemoteRecorderManagement6.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\RemoteRecorderManagementService\RemoteRecorderManagement1.xsd">
+    <None Include="Service References\RemoteRecorderManagementService\RemoteRecorderManagement61.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\RemoteRecorderManagementService\RemoteRecorderManagement2.xsd">
+    <None Include="Service References\RemoteRecorderManagementService\RemoteRecorderManagement62.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\RemoteRecorderManagementService\RemoteRecorderManagement3.xsd">
+    <None Include="Service References\RemoteRecorderManagementService\RemoteRecorderManagement63.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\RemoteRecorderManagementService\RemoteRecorderManagement4.xsd">
+    <None Include="Service References\RemoteRecorderManagementService\RemoteRecorderManagement64.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\RemoteRecorderManagementService\RemoteRecorderManagement5.xsd">
+    <None Include="Service References\RemoteRecorderManagementService\RemoteRecorderManagement65.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\RemoteRecorderManagementService\ScheduleTool.RemoteRecorderManagementService.ListRecordersResponse.datasource">
@@ -120,20 +120,23 @@
     <None Include="Service References\SessionManagementService\ScheduleTool.SessionManagementService.Session.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\SessionManagementService\SessionManagement.wsdl" />
-    <None Include="Service References\SessionManagementService\SessionManagement.xsd">
+    <None Include="Service References\SessionManagementService\SessionManagement1.wsdl" />
+    <None Include="Service References\SessionManagementService\SessionManagement5.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SessionManagementService\SessionManagement1.xsd">
+    <None Include="Service References\SessionManagementService\SessionManagement51.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SessionManagementService\SessionManagement2.xsd">
+    <None Include="Service References\SessionManagementService\SessionManagement52.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SessionManagementService\SessionManagement3.xsd">
+    <None Include="Service References\SessionManagementService\SessionManagement53.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SessionManagementService\SessionManagement4.xsd">
+    <None Include="Service References\SessionManagementService\SessionManagement54.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SessionManagementService\SessionManagement55.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -166,10 +169,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\RemoteRecorderManagementService\RemoteRecorderManagement.disco" />
+    <None Include="Service References\RemoteRecorderManagementService\RemoteRecorderManagement1.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\SessionManagementService\SessionManagement.disco" />
+    <None Include="Service References\SessionManagementService\SessionManagement1.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
